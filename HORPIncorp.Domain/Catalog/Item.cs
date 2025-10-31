@@ -1,7 +1,6 @@
 using System;
-using Emerald.Tiger.Domain.Catalog;
 
-namespace Jet.Piranha.Domain.Catalog
+namespace Emerald.Tiger.Domain.Catalog
 
 {
     public class Item

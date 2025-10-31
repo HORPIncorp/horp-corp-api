@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using Jet.Piranha.Domain.Catalog;
+using Emerald.Tiger.Domain.Catalog;
 
-namespace Jet.Piranha.Api.Controllers
+namespace HORPIncorp.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
