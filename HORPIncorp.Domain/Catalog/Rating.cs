@@ -1,4 +1,6 @@
-namespace Emerald.Tiger.Domain.Catalog;
+using System;
+
+namespace HORPIncorp.Domain.Catalog;
 
 public class Rating
 {

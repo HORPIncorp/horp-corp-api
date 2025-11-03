@@ -1,7 +1,7 @@
 using System;
+using System.Collections.Generic;
 
-namespace Emerald.Tiger.Domain.Catalog
-
+namespace HORPIncorp.Domain.Catalog
 {
     public class Item
     {
@@ -15,15 +15,15 @@ namespace Emerald.Tiger.Domain.Catalog
         {
             if (string.IsNullOrEmpty(name))
             {
-                throw new ArgumentNullException(name);
+                throw new ArgumentNullException(nameof(name));
             }
             if (string.IsNullOrEmpty(description))
             {
-                throw new ArgumentNullException(description);
+                throw new ArgumentNullException(nameof(description));
             }
             if (string.IsNullOrEmpty(brand))
             {
-                throw new ArgumentNullException(brand);
+                throw new ArgumentNullException(nameof(brand));
             }
             if (price < 0.00m)
             {

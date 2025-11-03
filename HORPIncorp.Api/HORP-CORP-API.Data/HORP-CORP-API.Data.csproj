@@ -9,4 +9,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\HORPIncorp.Domain\HORPIncorp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HORPIncorp.Domain\HORPIncorp.Domain.csproj" />
+    <ProjectReference Include="HORP-CORP-API.Data\HORP-CORP-API.Data.csproj" />
   </ItemGroup>
 
   <!-- Exclude nested project directory from this project's compile items to avoid duplicate assembly attributes -->

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Emerald.Tiger.Domain.Catalog;
+using HORPIncorp.Domain.Catalog;
 
 namespace HORPIncorp.Api.Controllers
 {
@@ -12,15 +12,15 @@ namespace HORPIncorp.Api.Controllers
         {
             var items = new List<Item>
             {
-                new Item("Shirt", "Ohio State Shirt", "Nike", 29.99m),
-                new Item ("Shorts", "Ohio State Shorts", "Nike", 44.99m)
+                new Item("Shirt", "Ohio State Shirt", "Nike",29.99m),
+                new Item ("Shorts", "Ohio State Shorts", "Nike",44.99m)
             };
             return Ok(items);
         }
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id)
         {
-            var item = new Item("Shirt", "Ohio State Shirt", "Nike", 29.99m);
+            var item = new Item("Shirt", "Ohio State Shirt", "Nike",29.99m);
             item.Id = id;
             
             return Ok(item);
@@ -35,7 +35,7 @@ namespace HORPIncorp.Api.Controllers
         [HttpPost("{id:int}/ratings")]
         public IActionResult PostRating(int id, [FromBody] Rating rating)
         {
-            var item = new Item("Shirt", "Ohio State Shirt", "Nike", 29.99m);
+            var item = new Item("Shirt", "Ohio State Shirt", "Nike",29.99m);
             item.Id = id;
             item.AddRating(rating);
 
