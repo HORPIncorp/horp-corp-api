@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HORPIncorp.Api", "HORPIncor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HORPIncorp.Domain", "HORPIncorp.Domain\HORPIncorp.Domain.csproj", "{5F7865E1-CC19-4547-895D-F211BFFDEDB1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C16D338D-A6BA-B256-E5FF-9D7DDE73AAC9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HORP-CORP-API.Data", "HORPIncorp.Api\HORP-CORP-API.Data\HORP-CORP-API.Data.csproj", "{D84050B4-C0EB-41F1-9103-E12F938B1AAD}"
 EndProject
 Global
@@ -60,8 +58,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{D84050B4-C0EB-41F1-9103-E12F938B1AAD} = {C16D338D-A6BA-B256-E5FF-9D7DDE73AAC9}
 	EndGlobalSection
 EndGlobal

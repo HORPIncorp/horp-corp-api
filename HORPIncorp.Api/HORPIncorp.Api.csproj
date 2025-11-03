@@ -15,4 +15,11 @@
     <ProjectReference Include="..\HORPIncorp.Domain\HORPIncorp.Domain.csproj" />
   </ItemGroup>
 
+  <!-- Exclude nested project directory from this project's compile items to avoid duplicate assembly attributes -->
+  <ItemGroup>
+    <Compile Remove="HORP-CORP-API.Data\**\*.cs" />
+    <None Remove="HORP-CORP-API.Data\bin\**" />
+    <None Remove="HORP-CORP-API.Data\obj\**" />
+  </ItemGroup>
+
 </Project>
