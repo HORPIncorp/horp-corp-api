@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using HORPIncorp.Domain.Catalog;
 using HORP_CORP_API.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace HORPIncorp.Api.Controllers
 {
@@ -55,8 +56,22 @@ namespace HORPIncorp.Api.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult Put(int id, Item item)
+        public IActionResult Put(int id, [FromBody] Item item)
         {
+            if (id != item.Id)
+            {
+                return BadRequest();
+            }
+
+           
+            if (_db.Items.Find(id) == null)
+            {
+                return NotFound();
+            }
+
+           
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
             return NoContent();
         }
 
