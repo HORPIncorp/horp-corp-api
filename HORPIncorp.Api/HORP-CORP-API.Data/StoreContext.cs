@@ -1,4 +1,5 @@
 using HORPIncorp.Domain.Catalog;
+using HORPIncorp.Domain.Orders;
 using Microsoft.EntityFrameworkCore;
 
 namespace HORP_CORP_API.Data
@@ -11,6 +12,8 @@ namespace HORP_CORP_API.Data
 
 
         public DbSet<Item> Items { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
