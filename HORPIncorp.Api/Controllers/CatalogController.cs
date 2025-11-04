@@ -23,10 +23,13 @@ namespace HORPIncorp.Api.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id)
         {
-            var item = new Item("Shirt", "Ohio State Shirt", "Nike",29.99m);
-            item.Id = id;
-            
+            var item = _db.Items.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
             return Ok(item);
+
         }
 
         [HttpPost]
