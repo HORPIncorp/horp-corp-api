@@ -1,6 +1,5 @@
-﻿using HORPIncorp.Domain;
-using Jet.Piranha.Domain.Catalog;
-using Emerald.Tiger.Domain.Catalog;
+﻿using HORPIncorp.Domain.Catalog;
+
 namespace HORPIncorp.Domain.Tests;
 
 [TestClass]
