@@ -10,8 +10,9 @@ namespace HORPIncorp.Domain.Catalog
         public string Description { get; set; }
         public string Brand { get; set; }
         public decimal Price { get; set; }
+        public string ImageUrl { get; set; }
         public List<Rating> Ratings { get; set; } = new List<Rating>();
-        public Item(string name, string description, string brand, decimal price)
+        public Item(string name, string description, string brand, decimal price, string imageUrl)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -25,7 +26,7 @@ namespace HORPIncorp.Domain.Catalog
             {
                 throw new ArgumentNullException(nameof(brand));
             }
-            if (price < 0.00m)
+            if (price <0.00m)
             {
                 throw new ArgumentException("Price must be greater than zero.");
             }
@@ -33,6 +34,7 @@ namespace HORPIncorp.Domain.Catalog
             Description = description;
             Brand = brand;
             Price = price;
+            ImageUrl = imageUrl;
         }
         public void AddRating(Rating rating)
         {

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using HORPIncorp.Domain.Catalog;
 using HORP_CORP_API.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HORPIncorp.Api.Controllers
 {
@@ -63,19 +64,20 @@ namespace HORPIncorp.Api.Controllers
                 return BadRequest();
             }
 
-           
+
             if (_db.Items.Find(id) == null)
             {
                 return NotFound();
             }
 
-           
+
             _db.Entry(item).State = EntityState.Modified;
             _db.SaveChanges();
             return NoContent();
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize("delete:catalog")]
         public IActionResult DeleteItem(int id)
         {
             var item = _db.Items.Find(id);
@@ -85,7 +87,7 @@ namespace HORPIncorp.Api.Controllers
             }
 
             _db.Items.Remove(item);
-            _db.SaveChanges();  
+            _db.SaveChanges();
             return NoContent();
         }
 
